@@ -1,38 +1,37 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo de la Intensidad de Corriente, Voltajes Parciales y Potencia en un Circuito en Serie</title>
+    <title>Cálculo de la Intensidad, Voltajes Parciales y Potencia</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
-        <h1>Cálculo de la Intensidad de Corriente, Voltajes Parciales y Potencia en un Circuito en Serie</h1>
+        <h1>Cálculo de la Intensidad, Voltajes Parciales y Potencia</h1>
+        <p class="descripcion">Esta calculadora te permitirá calcular la intensidad de corriente en un circuito en serie, la caída de voltaje en cada resistencia y la potencia disipada por cada una de las resistencias.</p>
 
-               <div class="inputs">
+        <div class="inputs">
             <label for="voltaje">Voltaje (V):</label>
             <input type="number" id="voltaje" required>
 
-            <label for="resistencia1">Resistencia 1 (kΩ):</label>
+            <label for="resistencia1">Resistencia 1 (Ω):</label>
             <input type="number" id="resistencia1" required>
 
-            <label for="resistencia2">Resistencia 2 (kΩ):</label>
+            <label for="resistencia2">Resistencia 2 (Ω):</label>
             <input type="number" id="resistencia2" required>
 
-            <label for="resistencia3">Resistencia 3 (kΩ):</label>
-            <input type="number" id="resistencia3" required>
-
-            <label for="resistencia4">Resistencia 4 (kΩ):</label>
-            <input type="number" id="resistencia4" required>
-
-            <button onclick="calcularIntensidad()">Calcular la Intensidad de Corriente</button>
+            <button onclick="calcularIntensidad()">Calcular</button>
         </div>
-    </div>
-    
-    <div id="resultado">
-        <p>Intensidad de Corriente: <span id="intensidad"></span>A</p>
+
+        <div id="resultado" style="display:none;">
+            <h3>Resultados:</h3>
+            <p>Intensidad de Corriente: <span id="intensidad"></span>A</p>
+            <p>Caída de Voltaje en R1: <span id="caidaVoltaje1"></span>V</p>
+            <p>Caída de Voltaje en R2: <span id="caidaVoltaje2"></span>V</p>
+            <p>Potencia disipada en R1: <span id="potencia1"></span>W</p>
+            <p>Potencia disipada en R2: <span id="potencia2"></span>W</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
